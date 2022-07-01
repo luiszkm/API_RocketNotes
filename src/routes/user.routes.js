@@ -20,4 +20,5 @@ userRoutes.post('/', userController.create)
 userRoutes.put('/', ensureAuthenticated, userController.update)
 
 userRoutes.patch("/avatar", ensureAuthenticated, upload.single("avatar"), userAvatarController.update)
+
 module.exports = userRoutes
